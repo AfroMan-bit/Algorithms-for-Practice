@@ -1,0 +1,67 @@
+function a(){
+ console.log('hello');
+}
+ console.log('Dojo');
+ output is 'Dojo' and 'hello' was never called.
+
+
+function a(){
+ console.log('hello');
+ return 15;
+}
+ x = a();
+ console.log('x is', x);
+ output is 15 for 'hello' and 15 for 'x is'.
+
+
+
+function a(n){
+ console.log('n is', n);
+ return n+15;
+}
+ x = a(3);
+ console.log('x is', x);
+ output is 3 for 'n is' and 'x is' for 18.
+
+
+
+function a(n){
+ console.log('n is', n);
+ y = n*2;
+  return y;
+}
+ x = a(3) + a(5);
+ console.log('x is', x);
+output is 'n is' 3, 5 and 'x is' is 16.
+
+
+
+function op(a,b){
+  c = a+b;
+  console.log('c is', c);
+  return c;
+}
+ x = op(2,3) + op(3,5);
+ console.log('x is', x); 
+ output is 'c is' 5, 8 and 'x is' is 13.
+   
+            
+function op(a,b){
+   c = a+b;
+   console.log('c is', c);
+   return c;
+}
+ x = op(2,3) + op(3,op(2,1)) + op(op(2,1),op(2,3));
+ console.log('x is', x)
+ output is 5, 6, 3, 5, 8 for 'x is' and 19.
+
+
+
+var x = 15;
+ function a(){
+   var x = 10;
+}
+ console.log(x);
+ a();
+ console.log(x);
+ output is 15, 15.
